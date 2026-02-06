@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* BACKGROUND IMAGE */
+body {
+    background: url("disc5.jpg") center / cover no-repeat fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* DARK OVERLAY */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
+
+.page {
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* logo left, nav center, login right */
+    align-items:center;
+    flex-wrap: nowrap;
+    padding: 30px 25px 30px 25px; /* top=10, right=20, bottom=30, left=40 */
+    max-width: 1700px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo image and text */
+    font-size: 26px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.logo-img {
+    width: 28px;  /* adjust to your logo size */
+    height: 28px;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    text-align: center; /* centers dropdown labels */
+}
+
+.nav-item:hover {
+    background: #5865f2;
+    padding: 7px 7px;
+    border-radius: 13px;
+    width: 120px;
+    height: 35px;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    background: white;
+    color: #23272a;
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color:lightgray;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown-menu {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background: #5865f2;
+    border-radius: 18px;
+    padding: 18px 20px;
+    width: 280px;
+    display: none;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-title {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 600;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline;
+}
+
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 72px;
+    max-width: 1400px;
+    margin: auto;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 620px;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.05;
+    color: white;
+    margin-bottom: 28px;
+    letter-spacing: -1px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #f2f2f2;
+    margin-bottom: 48px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    background: white;
+    color: #23272a;
+    padding: 16px 32px;
+    border-radius: 28px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.download-btn:hover{
+    background-color:lightgray;
+}
+
+.browser-btn {
+    background: #5865f2;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 28px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+    width: 100%;
+    max-width: 540px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
+    .nav {
+        gap: 16px; /* smaller gap on smaller screens */
+    }
+    .logo-img {
+        width: 24px;
+        height: 24px;
+    }
+    .nav-item {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px 40px;
+    }
+
+    .hero {
+        padding: 100px 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}
