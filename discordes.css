@@ -814,3 +814,62 @@ body {
     top: 100%;
     top: -350%;
 }
+
+.loop-section {
+  background: rgba(25, 7, 76, 0.7);
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.loop {
+  width: 200%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.loop__inner {
+  display: flex;
+  gap: 5rem;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+.loop span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+}
+
+.item {
+  position: relative;
+  padding-right: 2.5rem;   /* space for the logo */
+  display: inline-flex;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url("logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
