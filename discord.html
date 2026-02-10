@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<div class="global-bg">
+        <img src="lightblue.jpg" class="bg-layer layer-1">
+        <img src="mediumblue.jpg" class="bg-layer layer-2">
+        <img src="darkblue.jpg" class="bg-layer layer-3">
+        <img src="purplish.jpg" class="bg-layer layer-4">
+    </div>
+
 <!-- FLOATING STARS LAYER -->
     <div class="stars"></div>
 
@@ -85,8 +92,41 @@
         <a href="https://discord.com/jobs" class="nav-item">Careers</a>
     </nav>
 
+    <!-- HAMBURGER BUTTON -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
     <!-- LOGIN BUTTON -->
-    <a href="login.html" class="login-btn">Log In</a>
+    <a href="https://discord.com/channels/@me" class="login-btn">Open Discord</a>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo">
+                <img src="logo.png" alt="Discord"> Discord
+            </div>
+            <label for="nav-toggle" class="mobile-close">✕</label>
+        </div>
+        <div class="mobile-links">
+            <a href="https://discord.com/download" class="mobile-item">Download</a>
+            <a href="https://discord.com/nitro" class="mobile-item">Nitro</a>
+            <a href="https://discord.com/servers" class="mobile-item">Discover</a>
+            <a href="https://discord.com/quests" class="mobile-item">Quests</a>
+            <a href="https://discord.com/blog" class="mobile-item">Blog</a>
+            <a href="https://discord.com/safety" class="mobile-item">Safety</a>
+            <a href="https://support.discord.com" class="mobile-item">Support</a>
+            <a href="https://discord.com/developers" class="mobile-item">Developers</a>
+            <a href="https://discord.com/jobs" class="mobile-item">Careers</a>
+        </div>
+        <div class="mobile-actions">
+            <a href="login.html" class="mobile-login">Log In</a>
+            <a href="https://discord.com/download" class="mobile-download">Download App</a>
+        </div>
+    </div>
 </header>
 
     <!-- HERO -->
@@ -107,7 +147,7 @@
 
             <div class="buttons">
                 <a href="https://discord.com/download" class="download-btn">
-                    ⬇ Download for Windows
+                     <img src="downsym.png" alt="Discord"> Download for Windows
                 </a>
                 <a href="https://discord.com/app" class="browser-btn">
                     Open Discord in your browser
@@ -124,15 +164,7 @@
 
    <!-- ================= 2ND SECTION – “GROUPS & STREAMS” ================= -->
 <section class="second-section">
-    <div class="second-container">
-
-<!-- Illustration -->
-        <div class="second-video">
-    <video autoplay muted loop playsinline>
-        <source src="2nd.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+    <div class="second-container reverse">
 
         <!-- Text content -->
         <div class="second-text">
@@ -145,24 +177,14 @@
             </p>
         </div>
 
+        <div class="second-video">
+    <video autoplay muted loop playsinline>
+        <source src="2nd.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
         
     </div>
-</section>
-
-<section class="loop-section">
-  <div class="loop">
-<div class="loop__inner">
-  <span class="item">TALK</span>
-  <span class="item">PLAY</span>
-  <span class="item">CHAT</span>
-  <span class="item">HANGOUT</span>
-
-  <span class="item">TALK</span>
-  <span class="item">PLAY</span>
-  <span class="item">CHAT</span>
-  <span class="item">HANGOUT</span>
-</div>
-</div>
 </section>
 
 <!-- ================= 3RD SECTION – FEATURE SLIDE ================= -->
@@ -199,13 +221,7 @@
 <!--4TH-->
 
 <section class="feature-section">
-    <div class="feature-container">
-
-        <div class="feature-video">
-            <video autoplay muted loop playsinline>
-                <source src="4th.mp4" type="video/mp4">
-            </video>
-        </div>
+    <div class="feature-container reverse">
 
         <div class="feature-text">
             <h2>HOP IN WHEN
@@ -222,12 +238,39 @@
             </p>
         </div>
 
+         <div class="feature-video">
+            <video autoplay muted loop playsinline>
+                <source src="4th.mp4" type="video/mp4">
+            </video>
+        </div>
+
     </div>
+</section>
+
+<section class="loop-section">
+  <div class="loop">
+<div class="loop__inner">
+  <span class="item">TALK  </span>
+  <span class="item">PLAY</span>
+  <span class="item">CHAT</span>
+  <span class="item">HANGOUT</span>
+
+  <span class="item">TALK</span>
+  <span class="item">PLAY</span>
+  <span class="item">CHAT</span>
+  <span class="item">HANGOUT</span>
+
+  <span class="item">TALK</span>
+  <span class="item">PLAY</span>
+  <span class="item">CHAT</span>
+  <span class="item">HANGOUT</span>
+</div>
+</div>
 </section>
 
 <!--5TH-->
 <section class="feature-section">
-    <div class="feature-container reverse">
+    <div class="feature-container">
 
         <div class="feature-text">
             <h2>SEE WHO'S
@@ -254,13 +297,7 @@
 
 <!--6TH-->
 <section class="feature-section">
-    <div class="feature-container">
-
-        <div class="feature-video">
-            <video autoplay muted loop playsinline>
-                <source src="6th.mp4" type="video/mp4">
-            </video>
-        </div>
+    <div class="feature-container reverse">
 
         <div class="feature-text">
             <h2>ALWAYS HAVE
@@ -275,18 +312,19 @@
             </p>
         </div>
 
+<div class="feature-video">
+            <video autoplay muted loop playsinline>
+                <source src="6th.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
     </div>
 </section>
 
 <!--7TH-->
 <section class="feature-section">
     <div class="feature-container">
-
-        <div class="feature-video">
-            <video autoplay muted loop playsinline>
-                <source src="7th.mp4" type="video/mp4">
-            </video>
-        </div>
 
         <div class="feature-text">
             <h2>WHATEVER YOU
@@ -300,6 +338,12 @@
                <br> manage multiple group chats 
                <br>with friends.
             </p>
+        </div>
+
+        <div class="feature-video">
+            <video autoplay muted loop playsinline>
+                <source src="7th.mp4" type="video/mp4">
+            </video>
         </div>
 
     </div>
@@ -323,15 +367,6 @@
     <img src="float2.webp" alt="Illustration" class="image-full">
 </section>
 
-<!-- ================= EXTRA ILLUSTRATIONS SECTION ================= -->
-<section class="extra-illustrations">
-
-    <img src="hero1.png" alt="Hero" class="extra-img img-left">
-
-    <img src="hero1b.png" alt="Hero" class="extra-img img-right">
-
-</section>
-
 <!--AHHHHHHH FOOTER NAAA-->
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -339,7 +374,7 @@
 
         <!-- LEFT BRAND -->
         <div class="footer-brand">
-            <h3>AHAHAHAAAHAHAHAHAHAHHA NO WAYYYY </h3>
+             <img src="logo.png" alt="Illustration" class="image-full">
 
             <select class="language-select">
                 <option>English, USA</option>
@@ -395,13 +430,8 @@
     <div class="footer-bottom">
         <div class="footer-bottom-inner">
             <div class="footer-logo">
-                <img src="logo.png" alt="Discord Logo">
                 <span>Discord</span>
             </div>
-
-            <a href="https://discord.com/download" class="download-btn">
-                ⬇ Download
-            </a>
         </div>
     </div>
 </footer>
